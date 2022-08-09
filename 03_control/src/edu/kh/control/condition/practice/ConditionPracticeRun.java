@@ -7,9 +7,13 @@ public class ConditionPracticeRun {
 		
 //		cp.practice1();
 //		cp.practice2();
-		cp.practice3();
+//		cp.practice3();
 //		cp.practice4();
 //		cp.practice5();
+		
+		selfStudy ss = new selfStudy();
+		
+		ss.self();
 		
 	}
 
