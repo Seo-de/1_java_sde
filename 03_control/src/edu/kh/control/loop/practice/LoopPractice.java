@@ -142,26 +142,80 @@ public class LoopPractice {
 		
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
-		
-		for(int x=1; x<=input; x++) {
 			
-			for(int i=1; i<=x; i++) {
-				
-				System.out.print("*");
-			}System.out.println();
+			for(int i=1; i<=input; i++) {
+				for(int x=input; x>0; x--) {
+					if(i<x) {
+						System.out.print(" ");
+					}else {
+						System.out.print("*");
+					}	
+				}
+				System.out.println();
 		}
-			
-	
 
 	}
 	public void practice10() {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i=0; i<input; i++) {
+			for(int x=0; x<i+1; x++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for (int i=0; i<input-1; i++) {
+			for(int x=0; x<input-1-i; x++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
 	}
 	public void practice11() {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i=0; i<input;i++) {
+			for(int x=1; x<input-i;x++) {
+				System.out.print(" ");
+			}
+			for(int y=0; y<i*2+1; y++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}	
 	}
 	public void practice12() {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i=1; i<=input; i++) {
+			if(i==1 || i==input) {
+				for(int x=1; x<=input; x++) {
+					System.out.print("*");
+				}
+			}else {
+				for(int x=1; x<=input-1;) {
+					System.out.println("*");
+				}
+				for(int y=0; y<i*2-1; ) {
+					System.out.println(" ");
+				}
+			}
+			System.out.println();
+		}
 	}
 	public void practice13() {
 		
