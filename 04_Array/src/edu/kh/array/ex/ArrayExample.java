@@ -252,7 +252,7 @@ public class ArrayExample {
 		int min = scoreArr[0];
 		// 배열의 첫 번째 인덱스값을 최고/최저의 비교 기준으로 삼음.
 		
-		// breakoin를 지정한 라인 이전에 멈춘다!
+		// breakpoint를 지정한 라인 이전에 멈춘다!
 		// for문에 break point를 지정하면 증감식이 해석되기 전에 멈춘다!(debuh mode)
 		
 		for(int i = 1; i<scoreArr.length; i++) {
@@ -461,6 +461,7 @@ public class ArrayExample {
 		
 		System.out.println(arr2);
 	}
+	
 	
 	
 	
