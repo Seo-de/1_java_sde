@@ -7,22 +7,24 @@ public class ArrayPractice {
 	
 	public void ex01() {
 		int[] arr = new int[9];
+		
 		int sum=0;
 		for(int i=1; i<=arr.length; i++) {
-			System.out.print(i+" ");
+			System.out.print(arr[i]+" ");
 			if(i % 2 != 0) {
-				sum += i;
+				sum += arr[i];
 			}
 		} System.out.println("\n짝수 번째 인덱스 합 : " + sum);
 	}
 	
 	public void ex02() {
 		int[] arr = new int[9];
+		
 		int sum=0;
 		for(int i=arr.length; i>=1; i--) {
-			System.out.print(i + " ");
+			System.out.print(arr[i] + " ");
 			if(i % 2 == 0) {
-				sum += i;
+				sum += arr[i];
 			}
 		}System.out.println("\n홀수 번째 인덱스 합 : " + sum);
 	}
@@ -33,14 +35,17 @@ public class ArrayPractice {
 		 int input = sc.nextInt();
 		 int[] arr= new int[input];
 		 for(int i=0; i<arr.length; i++) {
-			 System.out.print((i+1) + " ");
+			 arr[i]=i+1;
+			 System.out.print(arr[i] + " ");
 		 }
 	}
 	
 	public void ex04() {
 		 Scanner sc = new Scanner(System.in);
 		 int[] arr = new int[5];
+		 
 		 boolean flag = true;
+		 
 		 for(int i=0; i<arr.length; i++) {
 			 System.out.printf("입력 %d : ", i);
 			 arr[i] = sc.nextInt();
@@ -59,26 +64,36 @@ public class ArrayPractice {
 
 		
 	}
-	// ??
+	// ?-다시 해보자
 	public void ex05() {
-//		 Scanner sc = new Scanner(System.in);
-//		 
-//		 System.out.print("문자열 : ");
-//		 String str = sc.next();
-//		 char[] charArr= str.toCharArray();
-//		 System.out.print("문자 : ");
-//		 String input2 = sc.next();
-//		 
-//		 int count=0;
-//		 
-//		 for(int i=0; i<charArr.length; i++) {
-//			 if(charArr[i].equals(input2)) {
-//				 count++;
-//			 }
-//
-//		 }
-//		 System.out.printf("%s에 %s가 존재하는 위치(인덱스) : \n", str, input2, charArr);
-//		 System.out.printf("%s 개수 : %d", input2, count);
+		 Scanner sc = new Scanner(System.in);
+
+		 System.out.print("문자열 : ");
+		 String str = sc.nextLine();
+		 char[] arr = new char[str.length()];
+		 
+		 for(int i=0; i<arr.length; i++) {
+			 arr[i]=str.charAt(i);
+		 }
+		 
+		 System.out.print("문자 : ");
+		 char ch = sc.nextLine().charAt(0);
+		 
+		 int count = 0;
+		 
+		 System.out.printf("%s에 %s가 존재하는 위치(인덱스) : ", str, ch);
+		 for(int i=0; i<arr.length; i++) {
+			 if(arr[i]==ch) {
+				 System.out.print(i + " ");
+				 count++;
+			 }
+		 }
+		 System.out.println();
+		 System.out.println(ch + "개수 : " + count);
+	}
+	
+	public void ex05_1() {
+
 	}
 	public void ex06() {
 		 Scanner sc = new Scanner(System.in);
@@ -282,29 +297,48 @@ public class ArrayPractice {
 //			 }System.out.println();
 //		 }
 //	}
-	public void ex21() {
-		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
-				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
-		int[][] arr1 = new int[3][2];
-		int[][] arr2 = new int[3][2];
-		
-		for(int i=1; i<=2; i++) {
-			System.out.println("== "+i+"분단 ==");
-			for(int x=0; x<arr1.length; x++) {
-				for(int y=0; y<arr1[x].length;y++) {
-					arr1 = students;
-				}
-			}
-		}
-		
-		
-	}
+	//?
+//	public void ex21() {
+//		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
+//				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
+//		int[][] arr1 = new int[3][2];
+//		int[][] arr2 = new int[3][2];
+//		
+//		for(int i=1; i<=2; i++) {
+//			System.out.println("== "+i+"분단 ==");
+//			for(int x=0; x<arr1.length; x++) {
+//				for(int y=0; y<arr1[x].length;y++) {
+//					arr1 = students[y];
+//				}
+//			}
+//		}
+//		
+//		
+//	}
+	
+	//?
 	public void ex22() {
 		
 	}
+	
+	// ?
 	public void ex23() {
-		
+		 Scanner sc = new Scanner(System.in);
+		 String[][] arr = new String[6][6];
+		 
+		 arr[0][0] = " ";
+		 
+		 for(int row=1; row<arr.length; row++) {
+			 for(int col=1; col<arr[row].length; col++) {
+				 System.out.print(  arr[col][row]);
+			 }System.out.println();
+		 }
+		 
+		 
+	
 	}
+	
+	// ?
 	public void ex24() {
 		
 	}
