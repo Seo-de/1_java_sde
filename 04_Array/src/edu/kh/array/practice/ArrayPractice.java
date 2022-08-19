@@ -64,7 +64,7 @@ public class ArrayPractice {
 
 		
 	}
-	// ?-다시 해보자
+	// 답안보고 이해
 	public void ex05() {
 		 Scanner sc = new Scanner(System.in);
 
@@ -113,9 +113,23 @@ public class ArrayPractice {
 		 
 		 
 	}
-	// ?
+	
 	public void ex07() {
-		
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("주민등록번호(-포함) : ");
+		 String input = sc.nextLine();
+		 
+		 char arr[] = new char[input.length()];
+		 for(int i=0; i<arr.length; i++) {
+			 arr[i] = input.charAt(i);
+			 if(i<=7) {
+				 System.out.print(arr[i]);
+			 }else {
+				 arr[i] = '*';
+				 System.out.print(arr[i]);
+			 }
+		 }
 	}
 	public void ex08() {
 		 Scanner sc = new Scanner(System.in);
@@ -194,8 +208,29 @@ public class ArrayPractice {
 		Arrays.sort(arr);
 		System.out.println(Arrays.toString(arr));
 	}
-	// ?
+	
+	// ???
 	public void ex13() {
+		 Scanner sc = new Scanner(System.in);
+		 
+		 System.out.print("문자열 : ");
+		 String str = sc.next();
+		 
+		 int count=0;
+		 
+		 char arr[] = new char[str.length()];
+		 
+		 for(int i=0; i<arr.length; i++) {
+			 arr[i] = str.charAt(i);
+			 for(int x=1; x<i; x++) {
+				 if(arr[x] == arr[i]) {
+					 x--;
+					 continue;
+				 }
+			 }System.out.print (arr[i] + " ");
+			
+		 }
+		 
 
 	}
 	
@@ -246,6 +281,7 @@ public class ArrayPractice {
 		}
 	}
 	
+	// ArrayExample2 참고
 	public void ex18() {
 		int[][] arr= new int[4][4];
 		for(int row=0; row<arr.length-1; row++) {
@@ -282,42 +318,51 @@ public class ArrayPractice {
 			 }System.out.println();
 		 }
 	}
-	// ?
-//	public void ex20() {
-//		 Scanner sc = new Scanner(System.in);
-//		 System.out.print("행의 크기 : ");
-//		 int rowSize = sc.nextInt();
-//		 int colSize = 0;
-//		 int[][] arr = new int[rowSize][colSize];
-//		 for(int row=0; row<rowSize; row++) {
-//			 System.out.print(row + "열의 크기 : ");
-//			 colSize = sc.nextInt();
-//			 for(int col=0; col<colSize; col++) {
-//				 System.out.println(arr[row][col]);
-//			 }System.out.println();
-//		 }
-//	}
+	// 가변배열 + 실습문제16 참고
+	public void ex20() {
+		 Scanner sc = new Scanner(System.in);
+		 System.out.print("행의 크기 : ");
+		 int rowSize = sc.nextInt();
+		 int[][] arr = new int[rowSize][];
+		 int count=0;
+		 
+		 for(int row=0; row<arr.length; row++) {
+			 System.out.print(row + "열의 크기 : ");
+			 int colSize = sc.nextInt();
+			 arr[row] = new int[colSize];
+			 for(int col=0; col<arr[row].length; col++) {
+			 } 
+		 }
+		 for(int row=0; row<arr.length; row++) {
+			 for(int col=0; col<arr[row].length; col++) {
+				 char a = 97;
+				 arr[row][col] = a+count;
+				 System.out.print((char)arr[row][col] + "  ");
+				 count++;
+				 
+			 }System.out.println();
+		 }
+ 
+	}
 	//?
-//	public void ex21() {
-//		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
-//				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
-//		int[][] arr1 = new int[3][2];
-//		int[][] arr2 = new int[3][2];
-//		
-//		for(int i=1; i<=2; i++) {
-//			System.out.println("== "+i+"분단 ==");
-//			for(int x=0; x<arr1.length; x++) {
-//				for(int y=0; y<arr1[x].length;y++) {
-//					arr1 = students[y];
-//				}
-//			}
-//		}
-//		
-//		
-//	}
+	public void ex21() {
+		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
+				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
+		String [][] arr;
+		System.out.println(students.length);
+		int[][] arr1 = new int[3][2];
+		int[][] arr2 = new int[3][2];
+		
+		for(int i=0; i<students.length; i++) { 
+			
+		}
+
+	}
 	
 	//?
 	public void ex22() {
+		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
+				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
 		
 	}
 	
