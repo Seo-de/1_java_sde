@@ -209,7 +209,7 @@ public class ArrayPractice {
 		System.out.println(Arrays.toString(arr));
 	}
 	
-	// ???
+	// ?
 	public void ex13() {
 		 Scanner sc = new Scanner(System.in);
 		 
@@ -349,7 +349,7 @@ public class ArrayPractice {
 		String[] students = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", 
 				"송성실", "윤예의", "진재주", "차천축", "피풍표","홍하하"};
 		String [][] arr;
-		System.out.println(students.length);
+		
 		int[][] arr1 = new int[3][2];
 		int[][] arr2 = new int[3][2];
 		
