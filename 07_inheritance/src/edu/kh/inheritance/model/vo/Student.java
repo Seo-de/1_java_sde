@@ -16,9 +16,40 @@ public class Student extends Person{
 	private int grade;  //학년
 	private int classRoom; // 반
 	
-	 public Student() {
+	 public Student() { // -> 여기엔 기본적으로 아무것도 안쓰느 경우가 많데
 		
+		 // Person(); // 부모 생성자 상속 X
+		 
+		 // super(); // super 생성자
+		 // 부모의 생성자를 참조하기 위해서 사용하는 생성자
+		 // 자식 생성자 내부 첫 번째 줄에만 작성이 가능
+		 
+		 // -> 자식 객체 생성 시 내부에
+		 //    부모 객체를 생성할 때 사용한다.
+		 
+		 // -> 자식 생성자 첫 번째 줄에 
+		 //   super() 생성자 미작성 시 컴파일러가 자동 추가.
 	}
+	 
+	 // 매개변수 생성자
+	 public Student(String name, int age, int grade, int classRoom) {
+		 
+		 // 상속 받은 자식도 부모의 private 필드에 직접 접근 불가
+//		 this.name=name;
+//		 this.age=age;
+		 
+		 
+		 // 방법1. 부모의 getter/setter 이용
+		 //setName(name);
+		// setAge(age);
+		 
+		 // 방법2. super() 생성자 이용
+		 super(name, age);
+		 
+		 this.grade=grade;
+		 this.classRoom=classRoom;
+		 
+	 }
 	 
 	 // alt + shift + s -> r
 
@@ -54,6 +85,31 @@ public class Student extends Person{
 		this.classRoom = classRoom;
 	}
 	 
+	
+	// Person으로 부터 상속받은 introduce 메서드 오버라이딩(재정의)
+	
+	@Override
+	public void introduce() {
+//		System.out.println("이름 : " + super.getName());
+//		System.out.println("나이 : " + super.getAge());
+		
+		super.introduce(); 
+		// 오버라이딩 되지 않은 부모의 introduce() 메서드를 호출
+		
+		System.out.println("학년 : " + getGrade());
+		System.out.println("반 : " + this.getClassRoom());
+	}
+	
+	
+	
+	/* Annotation(@-at) : 컴파일러용 주석
+	 *  -> 컴파일러에게 해당 코드가 무엇을 의미하는지
+	 *  	아니면 해당 코드를 수행하기 전에 무엇을 해야하는지 등을 알려줌
+	 *  
+	 *  @Override
+	 *   1) 컴파일러에게 해당 메서드는 오버라이딩 되었음을 알려줌
+	 *   2) 오버라이딩이 가능한지, 잘못 작성되지 않았는지 검사
+	 */
 	 
 	
 
