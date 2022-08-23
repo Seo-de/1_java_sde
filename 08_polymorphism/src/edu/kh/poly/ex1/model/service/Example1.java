@@ -137,7 +137,7 @@ public class Example1 {
 		// * 해결 방법 : instanceof 연산자로 다운캐스팅 할 타입이 맞는지 검사
 		
 		if(c3 instanceof Truck) {
-			((Truck)c3).getClass();
+			((Truck)c3).loading();
 		}else {
 			System.out.println("c3는 Truck 객체가 아닙니다.");
 		}
