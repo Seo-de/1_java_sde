@@ -59,7 +59,7 @@ public class Example1 {
 		arr[1] = new Truck(8,3,"경유", 5.0 ); // Truck 객체(업캐스팅)
 				// Car 참조 변수
 		
-		arr[2] = new Spark(4, 4, "희발유", 0.5); // Spark 객체(업캐스팅)
+		arr[2] = new Spark(4, 4, "휘발유", 0.5); // Spark 객체(업캐스팅)
 		
 		for(int i=0; i<arr.length; i++) {
 			System.out.println(arr[i]);
@@ -70,7 +70,7 @@ public class Example1 {
 		}
 		
 		// 업캐스팅 + 동적 바인딩 장점
-		//  -> 코드 재사용성 증가, 코드 길이 감소                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+		//  -> 코드 재사용성 증가, 코드 길이 감소
 		printCar(arr[0]); // Car
 		printCar(arr[1]); // Truck
 		printCar(arr[2]);// Spark
@@ -143,6 +143,21 @@ public class Example1 {
 		}
 	}
 	
+	
+	public void check(Car c) {
+		// 전달 받은 c의 타입을 검사해서 고유한 메서드를 호출 - loading 이나 dc 같은거
+		
+		if( c instanceof Spark ) { // 참조하는 객체가 Spark인 경우
+			((Spark)c).dc();
+		}
+		else if( c instanceof Truck) { // 참조하는 객체가 Truck인 경우
+			((Truck)c).loading();
+		} else {  // 참조하는 객체가 Car인 경우
+			System.out.println("Car는 고유 기능이 없습니다.");
+		}
+	}
+	
+	
 	public void ex4() {
 		// instanceof 연산자 사용 시 검사 순서에 대한 문제점
 		
@@ -161,20 +176,6 @@ public class Example1 {
 			((Spark)c).dc();
 		}
 	}
-	
-	public void check(Car c) {
-		// 전달 받은 c의 타입을 검사해서 고유한 메서드를 호출 - loading 이나 dc 같은거
-		
-		if( c instanceof Spark ) { // 참조하는 객체가 Spark인 경우
-			((Spark)c).dc();
-		}
-		else if( c instanceof Truck) { // 참조하는 객체가 Truck인 경우
-			((Truck)c).loading();
-		} else {  // 참조하는 객체가 Car인 경우
-			System.out.println("Car는 고유 기능이 없습니다.");
-		}
-	}
-	
 	
 	
 }
