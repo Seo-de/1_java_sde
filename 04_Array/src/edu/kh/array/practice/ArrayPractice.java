@@ -97,10 +97,14 @@ public class ArrayPractice {
 	}
 	public void ex06() {
 		 Scanner sc = new Scanner(System.in);
+		 
 		 System.out.print("정수 : ");
 		 int input = sc.nextInt();
+		 
 		 int[] arr = new int[input];
+		 
 		 int sum = 0;
+		 
 		 for(int i=0; i<input; i++) {
 			 System.out.print("배열"+i+"번째 인덱스에 넣을 값 : ");
 			 int num = sc.nextInt();
@@ -135,11 +139,11 @@ public class ArrayPractice {
 		 Scanner sc = new Scanner(System.in);
 		 System.out.print("정수 : ");
 		 int num = sc.nextInt();
-		 int[] arr = new int[num];
 		 
 		 if(num % 2 == 0 || num<=2) {
 			 System.out.println("다시 입력하세요.");
 		 }else {
+			 int[] arr = new int[num];
 			 for(int i=1; i<=(num/2+1); i++) {
 				 System.out.print(i + ", ");
 			 }for(int i=num/2; i>=1; i--) {
@@ -161,9 +165,11 @@ public class ArrayPractice {
 	public void ex10() {
 		int[] arr = new int[10];
 
+		System.out.print("발생한 난수 : ");
 		for(int i=0; i<arr.length; i++) {
 			int ran = (int)(Math.random()*10+1);
 			arr[i]=ran;
+			System.out.print(arr[i] + ", ");
 		}
 		int max = arr[0];
 		int min = arr[0];
@@ -176,7 +182,7 @@ public class ArrayPractice {
 			}
 		}
 		System.out.println();
-		System.out.println("발생한 난수 : " + Arrays.toString(arr));
+//		System.out.println("발생한 난수 : " + Arrays.toString(arr));
 		System.out.println("최대값 : " + max);
 		System.out.println("최소값 : " + min);
 		
@@ -187,13 +193,16 @@ public class ArrayPractice {
 			int ran = (int)(Math.random()*10+1);
 			arr[i] = ran;
 			for(int x=0; x<i; x++) {
-				if(arr[x]==ran) {
+				if(arr[x]==arr[i]) {
 				i--; break;
 				}
 			}
 		}
-		System.out.print(Arrays.toString(arr));
+		for(int i=0; i<arr.length; i++) {
+			System.out.print(arr[i] + ", ");			
+		}
 	}
+	
 	public void ex12() {
 		int[] arr = new int[6];
 		for(int i=0; i<arr.length; i++) {
@@ -216,20 +225,7 @@ public class ArrayPractice {
 		 System.out.print("문자열 : ");
 		 String str = sc.next();
 		 
-		 int count=0;
-		 
-		 char arr[] = new char[str.length()];
-		 
-		 for(int i=0; i<arr.length; i++) {
-			 arr[i] = str.charAt(i);
-			 for(int x=1; x<i; x++) {
-				 if(arr[x] == arr[i]) {
-					 x--;
-					 continue;
-				 }
-			 }System.out.print (arr[i] + " ");
-			
-		 }
+
 		 
 
 	}
