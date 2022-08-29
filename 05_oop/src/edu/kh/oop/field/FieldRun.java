@@ -49,7 +49,7 @@ public class FieldRun {
 		
 		
 		System.out.println("====================================");
-		System.out.println("포기화 블록 확인하기");
+		System.out.println("초기화 블록 확인하기");
 		
 		Trainee t1 = new Trainee(); // 훈련생 객체 생성
 		
